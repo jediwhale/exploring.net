@@ -1,12 +1,13 @@
-﻿using NUnit.Framework;
+﻿using Exploring.Net.CSharp;
+using NUnit.Framework;
 
 namespace Exploring.UnitTest {
     [TestFixture]
     public class NewtonTest {
 
         [Test]
-        public void First() {
-            Assert.AreEqual(1, 1);
+        public void InitialGuessIsCorrect() {
+            Assert.AreEqual(1.0, Newton.Sqrt(1.0));
         }
     }
 }
