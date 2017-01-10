@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("CSharp")]
-[assembly: AssemblyDescription("CSharp code for Exploring.NET")]
+[assembly: AssemblyTitle("Console")]
+[assembly: AssemblyDescription("Console for Exploring.NET")]
 [assembly: AssemblyProduct("Exploring.NET")]
 [assembly: AssemblyCopyright("Copyright © Syterra Software Inc. 2017")]
 
