@@ -7,7 +7,7 @@
     <ProjectGuid>{CEB4801E-270C-4061-95BE-91ECCC25F02E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Exploring.UnitTest</RootNamespace>
+    <RootNamespace>Exploring.Net.UnitTest</RootNamespace>
     <AssemblyName>UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -55,6 +55,10 @@
     <ProjectReference Include="..\CSharp\CSharp.csproj">
       <Project>{69e44206-ff9e-409c-adb4-91d7260c17ad}</Project>
       <Name>CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FSharp\FSharp.fsproj">
+      <Project>{526e0a1e-3a86-4f25-a182-fe01ebcde154}</Project>
+      <Name>FSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

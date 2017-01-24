@@ -1,23 +1,20 @@
-﻿namespace Exploring.Net.Console {
+﻿using System;
+
+namespace Exploring.Net.Console {
     class Program {
         static void Main(string[] args) {
-            if (args[0] == "c") {
                 while (true) {
                     System.Console.Write("? ");
                     var input = System.Console.ReadLine();
                     if (string.IsNullOrEmpty(input)) break;
-                    System.Console.WriteLine(CSharp.Newton.Sqrt(double.Parse(input)));
+                    System.Console.WriteLine(SquareRoot(args[0], double.Parse(input)));
                 }
             }
-            else
-            if (args[0] == "f") {
-                while (true) {
-                    System.Console.Write("? ");
-                    var input = System.Console.ReadLine();
-                    if (string.IsNullOrEmpty(input)) break;
-                    System.Console.WriteLine(FSharp.Newton.Sqrt(double.Parse(input)));
-                }
-            }
+
+        static double SquareRoot(string version, double input) {
+            if (version == "c") return CSharp.Newton.SquareRoot(input);
+            if (version == "f") return FSharp.Newton.SquareRoot(input);
+            throw new ApplicationException("unknown version");
         }
     }
 }
