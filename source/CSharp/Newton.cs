@@ -1,8 +1,8 @@
 ﻿using System;
 
 namespace Exploring.Net.CSharp {
-    public class Newton {
-        public static double SquareRoot(double input) {
+    public static class Newton {
+        public static double SquareRoot(this double input) {
             if (input < 0.0) throw new ArgumentOutOfRangeException();
             if (input == 0.0) return input;
             var guess = 1.0;

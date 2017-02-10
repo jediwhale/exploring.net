@@ -1,4 +1,5 @@
 ﻿using System;
+using Exploring.Net.CSharp;
 
 namespace Exploring.Net.Console {
     class Program {
@@ -12,7 +13,7 @@ namespace Exploring.Net.Console {
             }
 
         static double SquareRoot(string version, double input) {
-            if (version == "c") return CSharp.Newton.SquareRoot(input);
+            if (version == "c") return input.SquareRoot();
             if (version == "f") return FSharp.Newton.SquareRoot(input);
             throw new ApplicationException("unknown version");
         }

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Exploring.Net.CSharp;
+using NUnit.Framework;
 
 namespace Exploring.Net.UnitTest {
     public abstract class NewtonTest {
@@ -39,7 +40,7 @@ namespace Exploring.Net.UnitTest {
     [TestFixture]
     public class NewtonCSharpTest: NewtonTest {
         protected override double SquareRoot(double input) {
-            return CSharp.Newton.SquareRoot(input);
+            return input.SquareRoot();
         }
     }
 
