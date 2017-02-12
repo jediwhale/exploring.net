@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Example.cs" />
     <Compile Include="Newton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
