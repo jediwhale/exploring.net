@@ -1,8 +1,8 @@
 ﻿using System;
 
 namespace Exploring.Net.CSharp {
-    public class DoubleFunction {
-        public DoubleFunction(Func<double, double> function) {
+    public class HalfIntervalMethod {
+        public HalfIntervalMethod(Func<double, double> function) {
             this.function = function;
         }
 
@@ -17,7 +17,7 @@ namespace Exploring.Net.CSharp {
         double FindRootByHalfIntervals(Interval interval) {
             while (!interval.SmallEnough) {
                 var value = function(interval.MidPoint);
-                if (value == 0.0) return interval.MidPoint;
+                if (value == 0.0) break;
                 interval = value > 0.0 ? interval.RightHalf : interval.LeftHalf;
             }
             return interval.MidPoint;
