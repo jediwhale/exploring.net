@@ -15,7 +15,7 @@ namespace Exploring.Net.CSharp {
         }
 
         double FindRootByHalfIntervals(Interval interval) {
-            while (!interval.SmallEnough) {
+            while (!interval.SmallEnough(1E-10)) {
                 var value = function(interval.MidPoint);
                 if (value == 0.0) break;
                 interval = value > 0.0 ? interval.RightHalf : interval.LeftHalf;

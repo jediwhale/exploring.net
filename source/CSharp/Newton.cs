@@ -13,12 +13,8 @@ namespace Exploring.Net.CSharp {
             }
         }
 
-        static double CalculateNewGuess(double input, double guess) {
-            return (guess + input / guess) / 2.0;
-        }
+        static double CalculateNewGuess(double input, double guess) => (guess + input / guess) / 2.0;
 
-        static bool CloseEnough(double guess, double newGuess) {
-            return Math.Abs((guess - newGuess) / guess) < 0.000001;
-        }
+        static bool CloseEnough(double guess, double newGuess) => Math.Abs((guess - newGuess) / guess) < 0.000001;
     }
 }

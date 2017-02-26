@@ -10,17 +10,14 @@ namespace Exploring.Net.CSharp {
 
         public double MidPoint { get; }
 
-        public bool SmallEnough => Math.Abs(end - start) < 1E-10;
+        public bool SmallEnough(double threshold) => Math.Abs(end - start) < threshold;
         public bool CrossesZero => Math.Sign(start) == -Math.Sign(end) && Math.Sign(start) != 0;
         public bool Ascending => start < end;
 
         public Interval LeftHalf => new Interval(start, MidPoint);
         public Interval RightHalf => new Interval(MidPoint, end);
         public Interval Swap => new Interval(end, start);
-
-        public Interval Map(Func<double, double> function) {
-            return new Interval(function(start), function(end));
-        }
+        public Interval Map(Func<double, double> function) => new Interval(function(start), function(end));
 
         readonly double start;
         readonly double end;
