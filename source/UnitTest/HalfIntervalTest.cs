@@ -34,4 +34,11 @@ namespace Exploring.Net.UnitTest {
             return new HalfIntervalMethod(Math.Sin).FindRoot(new Interval(left, right));
         }
     }
+
+    [TestFixture]
+    public class HalfIntervalFSharpTest: HalfIntervalTest {
+        protected override double FindSineRoot(double left, double right) {
+            return FSharp.HalfIntervalMethod.FindSineRoot(new FSharp.Interval(left, right));
+        }
+    }
 }
