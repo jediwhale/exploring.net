@@ -10,7 +10,7 @@ namespace Exploring.Net.CSharp {
 
         public double MidPoint { get; }
 
-        public bool SmallEnough(double threshold) => Math.Abs(end - start) < threshold;
+        public double Size => Math.Abs(end - start);
         public bool CrossesZero => Math.Sign(start) == -Math.Sign(end) && Math.Sign(start) != 0;
         public bool Ascending => start < end;
 

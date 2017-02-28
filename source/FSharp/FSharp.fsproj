@@ -52,6 +52,7 @@
     <None Include="App.config" />
     <Compile Include="Newton.fs" />
     <Compile Include="Example.fs" />
+    <Compile Include="Interval.fs" />
     <Compile Include="HalfIntervalMethod.fs" />
   </ItemGroup>
   <PropertyGroup>
