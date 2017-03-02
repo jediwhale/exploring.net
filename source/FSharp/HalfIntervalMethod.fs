@@ -4,18 +4,18 @@ open Interval
 
 module HalfIntervalMethod = 
 
-    let rec private FindRootByHalfInterval aFunction interval =
-        match Size interval < 1E-10 with
-            | true -> Midpoint interval
-            | false ->
-                match aFunction (Midpoint interval) with
-                    | 0.0 -> Midpoint interval
-                    | value -> FindRootByHalfInterval aFunction (if value > 0.0 then RightHalf interval else LeftHalf interval)
+    let rec private findRootByHalfInterval aFunction interval =
+        match size interval with
+            | size when size < 1E-10 -> midpoint interval
+            | _ ->
+                match aFunction (midpoint interval) with
+                    | 0.0 -> midpoint interval
+                    | value -> findRootByHalfInterval aFunction (interval |> (if value > 0.0 then rightHalf else leftHalf))
 
-    let FindRoot aFunction interval =
-        let values = Map aFunction interval
-        match CrossesZero values with
-            | true -> FindRootByHalfInterval aFunction (if Ascending values then Swap interval else interval)
+    let findRoot aFunction interval =
+        let values = map aFunction interval
+        match crossesZero values with
+            | true -> findRootByHalfInterval aFunction (if ascending values then swap interval else interval)
             | _ -> raise (new System.ArgumentException("Values are not opposite signs."))
 
-    let FindSineRoot interval = FindRoot sin interval
+    let findSineRoot interval = findRoot sin interval
