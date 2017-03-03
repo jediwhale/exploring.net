@@ -17,7 +17,7 @@ namespace Exploring.Net.Console {
         static readonly Dictionary<string, Func<string>> functions =
             new Dictionary<string, Func<string>> {
                 {"c", () => DoubleFunction(CSharp.Newton.SquareRoot)},
-                {"f", () => DoubleFunction(FSharp.Newton.SquareRoot)},
+                {"f", () => DoubleFunction(FSharp.Newton.squareRoot)},
                 {"cr", () => IntFunction(CSharp.Example.Recurse)},
                 {"fr", () => IntFunction(FSharp.Example.Recurse)}
             };

@@ -47,7 +47,7 @@ namespace Exploring.Net.UnitTest {
     [TestFixture]
     public class NewtonFSharpTest: NewtonTest {
         protected override double SquareRoot(double input) {
-            return FSharp.Newton.SquareRoot(input);
+            return FSharp.Newton.squareRoot(input);
         }
     }
 }

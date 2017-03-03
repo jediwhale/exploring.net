@@ -2,7 +2,7 @@
 
 module Interval = 
 
-    type Interval = {Start: float; Finish: float}
+    type IntervalType = {Start: float; Finish: float}
 
     let create start finish = {Start = start; Finish = finish}
 
@@ -16,4 +16,3 @@ module Interval =
     let rightHalf interval = create (midpoint interval) interval.Finish
     let swap interval = create interval.Finish interval.Start
     let map aFunction interval  = create (aFunction interval.Start) (aFunction interval.Finish)
-

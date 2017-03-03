@@ -11,14 +11,14 @@ namespace Exploring.Net.CSharp {
             if (!values.CrossesZero) {
                 throw new ArgumentException("Values are not opposite signs.");
             }
-            return FindRootByHalfIntervals(values.Ascending ? interval.Swap : interval);
+            return FindRootByHalfIntervals(values.Ascending ? interval: interval.Swap);
         }
 
         double FindRootByHalfIntervals(Interval interval) {
             while (interval.Size >= 1E-10) {
                 var value = function(interval.MidPoint);
                 if (value == 0.0) break;
-                interval = value > 0.0 ? interval.RightHalf : interval.LeftHalf;
+                interval = value < 0.0 ? interval.RightHalf : interval.LeftHalf;
             }
             return interval.MidPoint;
         }
