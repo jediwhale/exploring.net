@@ -15,4 +15,4 @@ module Interval =
     let leftHalf interval = create interval.Start (midpoint interval)
     let rightHalf interval = create (midpoint interval) interval.Finish
     let swap interval = create interval.Finish interval.Start
-    let map aFunction interval  = create (aFunction interval.Start) (aFunction interval.Finish)
+    let map aFunction interval = create (aFunction interval.Start) (aFunction interval.Finish)
