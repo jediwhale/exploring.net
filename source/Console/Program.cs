@@ -18,6 +18,7 @@ namespace Exploring.Net.Console {
             new Dictionary<string, Func<string>> {
                 {"c", () => DoubleFunction(CSharp.Newton.SquareRoot)},
                 {"f", () => DoubleFunction(FSharp.Newton.squareRoot)},
+                {"fn", () => DoubleFunction(FSharp.NewtonsMethod.squareRoot)},
                 {"cr", () => IntFunction(CSharp.Example.Recurse)},
                 {"fr", () => IntFunction(FSharp.Example.Recurse)}
             };
