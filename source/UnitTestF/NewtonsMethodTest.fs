@@ -2,6 +2,7 @@
 
 open NUnit.Framework
 open Exploring.Net.FSharp.NewtonsMethod
+open Exploring.Net.CSharp
 
 [<AbstractClass>]
 type NewtonsMethodTest() =
@@ -20,4 +21,9 @@ type NewtonsMethodTest() =
 type NewtonsMethodTestFSharp() =
     inherit NewtonsMethodTest()
     override this.FindSquareRoot input = squareRoot input
+
+[<TestFixture>]
+type NewtonsMethodTestCSharp() =
+    inherit NewtonsMethodTest()
+    override this.FindSquareRoot input = NewtonsMethod.SquareRoot input
     

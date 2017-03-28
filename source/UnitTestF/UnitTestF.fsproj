@@ -68,6 +68,11 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CSharp\CSharp.csproj">
+      <Name>CSharp</Name>
+      <Project>{69e44206-ff9e-409c-adb4-91d7260c17ad}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <ProjectReference Include="..\FSharp\FSharp.fsproj">
       <Name>FSharp</Name>
       <Project>{526e0a1e-3a86-4f25-a182-fe01ebcde154}</Project>

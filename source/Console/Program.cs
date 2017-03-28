@@ -17,10 +17,11 @@ namespace Exploring.Net.Console {
         static readonly Dictionary<string, Func<string>> functions =
             new Dictionary<string, Func<string>> {
                 {"c", () => DoubleFunction(CSharp.Newton.SquareRoot)},
-                {"f", () => DoubleFunction(FSharp.Newton.squareRoot)},
-                {"fn", () => DoubleFunction(FSharp.NewtonsMethod.squareRoot)},
+                {"cn", () => DoubleFunction(CSharp.NewtonsMethod.SquareRoot)},
                 {"cr", () => IntFunction(CSharp.Example.Recurse)},
-                {"fr", () => IntFunction(FSharp.Example.Recurse)}
+                {"f", () => DoubleFunction(FSharp.Newton.squareRoot)},
+                {"fr", () => IntFunction(FSharp.Example.Recurse)},
+                {"fn", () => DoubleFunction(FSharp.NewtonsMethod.squareRoot)}
             };
 
         static string DoubleFunction(Func<double, double> calculate) {
