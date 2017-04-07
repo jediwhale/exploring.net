@@ -1,11 +1,11 @@
 ﻿namespace Exploring.Net.UnitTestF
 
 open NUnit.Framework
-open Exploring.Net.FSharp.NewtonsMethod
+open Exploring.Net.FSharp.Newton
 open Exploring.Net.CSharp
 
 [<AbstractClass>]
-type NewtonsMethodTest() =
+type NewtonTest() =
 
     abstract member FindSquareRoot: float -> float
 
@@ -18,12 +18,12 @@ type NewtonsMethodTest() =
         Assert.AreEqual(2.0, this.FindSquareRoot(4.0), 1E-10);
 
 [<TestFixture>]
-type NewtonsMethodTestFSharp() =
-    inherit NewtonsMethodTest()
-    override this.FindSquareRoot input = squareRoot input
+type NewtonTestFSharp() =
+    inherit NewtonTest()
+    override this.FindSquareRoot input = squareRoot2 input
 
 [<TestFixture>]
-type NewtonsMethodTestCSharp() =
-    inherit NewtonsMethodTest()
-    override this.FindSquareRoot input = NewtonsMethod.SquareRoot input
+type NewtonTestCSharp() =
+    inherit NewtonTest()
+    override this.FindSquareRoot input = Newton.SquareRoot2 input
     

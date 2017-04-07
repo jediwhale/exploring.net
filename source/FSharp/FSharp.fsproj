@@ -54,7 +54,6 @@
     <Compile Include="Example.fs" />
     <Compile Include="Interval.fs" />
     <Compile Include="HalfIntervalMethod.fs" />
-    <Compile Include="NewtonsMethod.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

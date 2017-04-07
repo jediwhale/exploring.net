@@ -48,7 +48,6 @@
     <Compile Include="HalfIntervalMethod.cs" />
     <Compile Include="Interval.cs" />
     <Compile Include="Newton.cs" />
-    <Compile Include="NewtonsMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
